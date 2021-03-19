@@ -1,0 +1,13 @@
+{
+    "name": "przeslijmi/siwiki",
+    "version": "v1.0.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Przeslijmi\\Siwiki\\": "src/"
+        }
+    },
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
+}

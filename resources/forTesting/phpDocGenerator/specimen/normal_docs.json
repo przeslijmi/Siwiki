@@ -1,0 +1,2076 @@
+{
+    "przeslijmi\/siwiki": {
+        "composer": {
+            "name": "przeslijmi\/siwiki",
+            "version": "v1.0.0",
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Przeslijmi\\Siwiki\\": "src\/"
+                }
+            },
+            "require": {
+                "erusev\/parsedown": "^1.7"
+            }
+        },
+        "classes": {
+            "Przeslijmi\\Siwiki\\Commands\\CommandsInterface": {
+                "uri": "src\/Commands\/CommandsInterface.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands",
+                "uses": [],
+                "class": {
+                    "name": "CommandsInterface",
+                    "type": "interface",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Interface for all Comands.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 319,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parses command.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Commands\\CommandsParent": {
+                "uri": "src\/Commands\/CommandsParent.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands",
+                "uses": {
+                    "Siwiki": "Przeslijmi\\Siwiki\\Siwiki"
+                },
+                "class": {
+                    "name": "CommandsParent",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Parent for all Comands defining common elements of them.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "protected",
+                        "isStatic": false,
+                        "name": "siwiki",
+                        "posStart": 402,
+                        "comments": {
+                            "title": "Parent Siwiki object.",
+                            "contents": "@var Siwiki."
+                        }
+                    },
+                    {
+                        "scope": "protected",
+                        "isStatic": false,
+                        "name": "text",
+                        "posStart": 593,
+                        "comments": {
+                            "title": "Text in which command has to be served (md or html contents).",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "protected",
+                        "isStatic": false,
+                        "name": "fullCommand",
+                        "posStart": 759,
+                        "comments": {
+                            "title": "Full command from md or html contents.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "protected",
+                        "isStatic": false,
+                        "name": "command",
+                        "posStart": 936,
+                        "comments": {
+                            "title": "Only middle part of command - params list.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1407,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor - defines properties.",
+                            "contents": "@param Siwiki $siwiki      Parent Siwiki object.\r\n@param string $text        Text in which command has to be served (md or html contents).\r\n@param string $fullCommand Full command from md or html contents.\r\n@param string $command     Only middle part of command - params list."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getCommandArray",
+                        "posStart": 1975,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Return `command` params as an array.",
+                            "contents": "Return pairs of key => value with params.\r\n@return array"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Commands\\Html\\AddClassToTag": {
+                "uri": "src\/Commands\/Html\/AddClassToTag.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands\\Html",
+                "uses": {
+                    "CommandsInterface": "Przeslijmi\\Siwiki\\Commands\\CommandsInterface",
+                    "CommandsParent": "Przeslijmi\\Siwiki\\Commands\\CommandsParent"
+                },
+                "class": {
+                    "name": "AddClassToTag",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "CommandsParent",
+                    "implements": [
+                        "CommandsInterface"
+                    ],
+                    "comments": {
+                        "title": "Serves for command `html.addClassToTag`.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 504,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parses command.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Commands\\Html\\CopyH1": {
+                "uri": "src\/Commands\/Html\/CopyH1.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands\\Html",
+                "uses": {
+                    "CommandsInterface": "Przeslijmi\\Siwiki\\Commands\\CommandsInterface",
+                    "CommandsParent": "Przeslijmi\\Siwiki\\Commands\\CommandsParent"
+                },
+                "class": {
+                    "name": "CopyH1",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "CommandsParent",
+                    "implements": [
+                        "CommandsInterface"
+                    ],
+                    "comments": {
+                        "title": "Serves for command `html.addClassToTag`.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 497,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parses command.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Commands\\Html\\IncludeHtml": {
+                "uri": "src\/Commands\/Html\/IncludeHtml.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands\\Html",
+                "uses": {
+                    "CommandsInterface": "Przeslijmi\\Siwiki\\Commands\\CommandsInterface",
+                    "CommandsParent": "Przeslijmi\\Siwiki\\Commands\\CommandsParent"
+                },
+                "class": {
+                    "name": "IncludeHtml",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "CommandsParent",
+                    "implements": [
+                        "CommandsInterface"
+                    ],
+                    "comments": {
+                        "title": "Serves for command `html.include`.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 496,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parses command.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Commands\\Md\\IncludeMd": {
+                "uri": "src\/Commands\/Md\/IncludeMd.php",
+                "namespace": "Przeslijmi\\Siwiki\\Commands\\Md",
+                "uses": {
+                    "CommandsInterface": "Przeslijmi\\Siwiki\\Commands\\CommandsInterface",
+                    "CommandsParent": "Przeslijmi\\Siwiki\\Commands\\CommandsParent"
+                },
+                "class": {
+                    "name": "IncludeMd",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "CommandsParent",
+                    "implements": [
+                        "CommandsInterface"
+                    ],
+                    "comments": {
+                        "title": "Serves for command `md.include`.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 490,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parses command.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Configure\\Handlers": {
+                "uri": "src\/Configure\/Handlers.php",
+                "namespace": "Przeslijmi\\Siwiki\\Configure",
+                "uses": {
+                    "ErrorException": "Przeslijmi\\Siwiki\\Exceptions\\ErrorException",
+                    "Exception": "Exception"
+                },
+                "class": {
+                    "name": "Handlers",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Catches warning and returns exception.",
+                        "contents": "@phpcs:disable Squiz.Commenting.ClassComment\r\n@codeCoverageIgnore"
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": true,
+                        "name": "errorHandler",
+                        "posStart": 867,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Catches warning and returns exception.",
+                            "contents": "@param integer $errno   Error level.\r\n@param string  $errstr  Error description.\r\n@param string  $errfile In which file error has occured.\r\n@param integer $errline In which line error has occured.\r\n@throws ErrorException Every time is called.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": true,
+                        "name": "exceptionHandler",
+                        "posStart": 1367,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Handles uncaught exception (when `$_ENV['PRZESLIJMI_SIWIKI_HANDLE_EXCEPTIONS']` is `true`).",
+                            "contents": "@param Exception $exc Exception that was thrown.\r\n@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Configure\\PhpDocGenerator\\App": {
+                "uri": "src\/Configure\/PhpDocGenerator\/App.php",
+                "namespace": "Przeslijmi\\Siwiki\\Configure\\PhpDocGenerator",
+                "uses": [],
+                "class": {
+                    "name": "App",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Definition of PHP application that has to be included in documentation generation.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "name",
+                        "posStart": 368,
+                        "comments": {
+                            "title": "Name of app.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "srcUri",
+                        "posStart": 556,
+                        "comments": {
+                            "title": "Uri in which PHP files are located (`src\/` dir as usual).",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "composerJsonUri",
+                        "posStart": 717,
+                        "comments": {
+                            "title": "Uri of `composer.json` file.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 989,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string $name   Name of app.\r\n@param string $srcUri Uri in which PHP files are located (`src\/` dir as usual)."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setName",
+                        "posStart": 1389,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for name of app.",
+                            "contents": "@param string $name Name of app.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getName",
+                        "posStart": 1708,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for name of app.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setSrcUri",
+                        "posStart": 2014,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for source uri.",
+                            "contents": "@param string $srcUri Source uri.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getSrcUri",
+                        "posStart": 2509,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for source uri.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setComposerJson",
+                        "posStart": 2855,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for `composer.json` uri..",
+                            "contents": "@param string $composerJsonUri Uri of `composer.json` file.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getComposerJson",
+                        "posStart": 3224,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for `composer.json` uri..",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Configure\\PhpDocGeneratorConfigure": {
+                "uri": "src\/Configure\/PhpDocGeneratorConfigure.php",
+                "namespace": "Przeslijmi\\Siwiki\\Configure",
+                "uses": {
+                    "Parsedown": "Parsedown",
+                    "App": "Przeslijmi\\Siwiki\\Configure\\PhpDocGenerator\\App"
+                },
+                "class": {
+                    "name": "PhpDocGeneratorConfigure",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Collection of getters and setters as abstract class neccesary for PhpDocGenerator",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "dstUri",
+                        "posStart": 515,
+                        "comments": {
+                            "title": "Destination uri - where to put generated `JSON` file.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "apps",
+                        "posStart": 663,
+                        "comments": {
+                            "title": "Apps collection.",
+                            "contents": "@var App[]"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setDstUri",
+                        "posStart": 891,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for destination uri.",
+                            "contents": "@param string $dstUri Destination uri.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getDstUri",
+                        "posStart": 1391,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for destination uri.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "addApp",
+                        "posStart": 1787,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Adder of App.",
+                            "contents": "@param string $name   Name of app.\r\n@param string $srcUri Uri in which PHP files are located (`src\/` dir as usual).\r\n@return App"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getApps",
+                        "posStart": 2219,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for Apps.",
+                            "contents": "@return App[]"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Configure\\SiwikiConfigure": {
+                "uri": "src\/Configure\/SiwikiConfigure.php",
+                "namespace": "Przeslijmi\\Siwiki\\Configure",
+                "uses": {
+                    "Parsedown": "Parsedown"
+                },
+                "class": {
+                    "name": "SiwikiConfigure",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Collection of getters and setters as abstract class neccesary for Siwiki",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "protected",
+                        "isStatic": false,
+                        "name": "commands",
+                        "posStart": 522,
+                        "comments": {
+                            "title": "Commands possible to use by Siwiki.",
+                            "contents": "For an example see `specimen.env.php`, at `PRZESLIJMI_SIWIKI_COMMANDS`.\r\n@var string[]"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "srcUri",
+                        "posStart": 670,
+                        "comments": {
+                            "title": "Source uri.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "dstUri",
+                        "posStart": 819,
+                        "comments": {
+                            "title": "Destination uri.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "inclDoc",
+                        "posStart": 1008,
+                        "comments": {
+                            "title": "Am I to include documentation during generation or not.",
+                            "contents": "@var boolean"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1145,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor - reads `commands` from `env`.",
+                            "contents": ""
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setSrcUri",
+                        "posStart": 1515,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for source uri.",
+                            "contents": "@param string $srcUri Source uri.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getSrcUri",
+                        "posStart": 2010,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for source uri.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setDstUri",
+                        "posStart": 2330,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for destination uri.",
+                            "contents": "@param string $dstUri Destination uri.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getDstUri",
+                        "posStart": 2830,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for destination uri.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "setInclDoc",
+                        "posStart": 3211,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Setter for include documentation.",
+                            "contents": "@param boolean $inclDoc Opt., `true`. Am I to include documentation during generation or not.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getInclDoc",
+                        "posStart": 3534,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for include documentation.",
+                            "contents": "@return boolean"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\CleaningDstDirFopException": {
+                "uri": "src\/Exceptions\/CleaningDstDirFopException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "CleaningDstDirFopException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "Cleaning destination dir somewhow failed (see cause).",
+                        "contents": "@phpcs:disable Squiz.Commenting.ClassComment\r\n@codeCoverageIgnore"
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 618,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": "@param string         $uri   Source or destination.\r\n@param Throwable|null $cause Cause."
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\DocsJsonDonoexException": {
+                "uri": "src\/Exceptions\/DocsJsonDonoexException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "DocsJsonDonoexException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "Asked to include docs generation but `_docs.json` is not present in source uri.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 399,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": ""
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\ErrorException": {
+                "uri": "src\/Exceptions\/ErrorException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "ErrorException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "Exception just to pack-up error.",
+                        "contents": "@phpcs:disable Squiz.Commenting.ClassComment\r\n@codeCoverageIgnore"
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 721,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": "@param integer $errno   Error level.\r\n@param string  $errstr  Error description.\r\n@param string  $errfile In which file error has occured.\r\n@param integer $errline In which line error has occured."
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\UnknownCommandException": {
+                "uri": "src\/Exceptions\/UnknownCommandException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "UnknownCommandException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "A command that is unknown is called.",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 506,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": "@param string $mdFile  MD file in which command has been called.\r\n@param string $command Unknown command."
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\UriDonoexException": {
+                "uri": "src\/Exceptions\/UriDonoexException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "UriDonoexException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "Exception of not existing uri (source or destination).",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 502,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": "@param string         $type  Source or destination.\r\n@param Throwable|null $cause Cause."
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Exceptions\\UriEmptyException": {
+                "uri": "src\/Exceptions\/UriEmptyException.php",
+                "namespace": "Przeslijmi\\Siwiki\\Exceptions",
+                "uses": {
+                    "Exception": "Exception",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "UriEmptyException",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Exception",
+                    "implements": [],
+                    "comments": {
+                        "title": "Exception of empty uri (source or destination).",
+                        "contents": ""
+                    }
+                },
+                "properties": [],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 494,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Construct.",
+                            "contents": "@param string         $type  Source or destination.\r\n@param Throwable|null $cause Cause."
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdGenerator": {
+                "uri": "src\/MdGenerators\/MdGenerator.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "MdTextForAllClassesIndex": "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllClassesIndex",
+                    "MdTextForAllPublicMethodsIndex": "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllPublicMethodsIndex",
+                    "MdTextForClass": "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForClass",
+                    "MdTextForNamespace": "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForNamespace",
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdGenerator",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Gathers all MD to be generated.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "docs",
+                        "posStart": 616,
+                        "comments": {
+                            "title": "Full docs of app.",
+                            "contents": "@var stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mds",
+                        "posStart": 780,
+                        "comments": {
+                            "title": "List of MD's that have to be parsed.",
+                            "contents": "@var string[]"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 950,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param stdClass $docs Full docs of app."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "generate",
+                        "posStart": 1283,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Calls subsuquent generations and returns list of MD's that have to be parsed.",
+                            "contents": "@return array"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "forEveryClass",
+                        "posStart": 1939,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Generate MD for every class.",
+                            "contents": "@param stdClass $appDocs Part of docs for one app.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "forEveryNamespace",
+                        "posStart": 2736,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Generate MD for every namespace.",
+                            "contents": "@param stdClass $appDocs Part of docs for one app.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "forIndexes",
+                        "posStart": 3804,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Generate MD with index of all classes.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllClassesIndex": {
+                "uri": "src\/MdGenerators\/MdTextForAllClassesIndex.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdTextForAllClassesIndex",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Generates md text for index of all classes.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "docs",
+                        "posStart": 375,
+                        "comments": {
+                            "title": "Full docs of app.",
+                            "contents": "@var stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdName",
+                        "posStart": 522,
+                        "comments": {
+                            "title": "Name of generated MD.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdContents",
+                        "posStart": 680,
+                        "comments": {
+                            "title": "Contents of generated MD.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 857,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param stdClass $docs Full docs of app."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdName",
+                        "posStart": 1232,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md name.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdContents",
+                        "posStart": 1481,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md contents.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "getAllClasses",
+                        "posStart": 3095,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Delivers all classes.",
+                            "contents": "@return stdClass[]"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllPagesIndex": {
+                "uri": "src\/MdGenerators\/MdTextForAllPagesIndex.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdTextForAllPagesIndex",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Generates md text for index of all pages.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "allPages",
+                        "posStart": 380,
+                        "comments": {
+                            "title": "List of all pages in wiki.",
+                            "contents": "@var string[]"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdName",
+                        "posStart": 536,
+                        "comments": {
+                            "title": "Name of generated MD.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdContents",
+                        "posStart": 694,
+                        "comments": {
+                            "title": "Contents of generated MD.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 876,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string[] $allPages List of all pages."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdName",
+                        "posStart": 1297,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md name.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdContents",
+                        "posStart": 1546,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md contents.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllPublicMethodsIndex": {
+                "uri": "src\/MdGenerators\/MdTextForAllPublicMethodsIndex.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdTextForAllPublicMethodsIndex",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Generates md text for index of all public methods.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "docs",
+                        "posStart": 388,
+                        "comments": {
+                            "title": "Full docs of app.",
+                            "contents": "@var stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdName",
+                        "posStart": 535,
+                        "comments": {
+                            "title": "Name of generated MD.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdContents",
+                        "posStart": 693,
+                        "comments": {
+                            "title": "Contents of generated MD.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 870,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param stdClass $docs Full docs of app."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdName",
+                        "posStart": 1252,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md name.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdContents",
+                        "posStart": 1501,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md contents.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "getAllPublicMethods",
+                        "posStart": 3246,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Delivers all public methods.",
+                            "contents": "@return stdClass[]"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForClass": {
+                "uri": "src\/MdGenerators\/MdTextForClass.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdTextForClass",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Generates md test for class.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "className",
+                        "posStart": 400,
+                        "comments": {
+                            "title": "Full name of class (with namespace) for which MD has to be generated.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "class",
+                        "posStart": 547,
+                        "comments": {
+                            "title": "Docs of class.",
+                            "contents": "@var stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdName",
+                        "posStart": 695,
+                        "comments": {
+                            "title": "Name of generated MD.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdContents",
+                        "posStart": 853,
+                        "comments": {
+                            "title": "Contents of generated MD.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1144,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string   $className Full name of class (with namespace) for which MD has to be generated.\r\n@param stdClass $class     Docs of class."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdName",
+                        "posStart": 1624,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md name.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdContents",
+                        "posStart": 1873,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md contents.",
+                            "contents": "@return string"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForNamespace": {
+                "uri": "src\/MdGenerators\/MdTextForNamespace.php",
+                "namespace": "Przeslijmi\\Siwiki\\MdGenerators",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MdTextForNamespace",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Generates md text for namespace.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "appDocs",
+                        "posStart": 358,
+                        "comments": {
+                            "title": "Full docs of app.",
+                            "contents": "@var stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "namespace",
+                        "posStart": 530,
+                        "comments": {
+                            "title": "Namespace for which MD has to be generated.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdName",
+                        "posStart": 682,
+                        "comments": {
+                            "title": "Name of generated MD.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "mdContents",
+                        "posStart": 840,
+                        "comments": {
+                            "title": "Contents of generated MD.",
+                            "contents": "@var string"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1108,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param stdClass $appDocs   Full docs of app.\r\n@param string   $namespace Namespace for which MD has to be generated."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdName",
+                        "posStart": 1596,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md name.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getMdContents",
+                        "posStart": 1845,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for md contents.",
+                            "contents": "@return string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "getClassesOfThisNamespace",
+                        "posStart": 4646,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Delivers all classes of this namespace.",
+                            "contents": "@return stdClass[]"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "getNamespacesOfThisNamespace",
+                        "posStart": 5459,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Delivers all namespaces of this namespace.",
+                            "contents": "@return stdClass[]"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\PhpDocGenerator": {
+                "uri": "src\/PhpDocGenerator.php",
+                "namespace": "Przeslijmi\\Siwiki",
+                "uses": {
+                    "App": "Przeslijmi\\Siwiki\\Configure\\PhpDocGenerator\\App",
+                    "Configure": "Przeslijmi\\Siwiki\\Configure\\PhpDocGeneratorConfigure",
+                    "ClassParser": "Przeslijmi\\Siwiki\\PhpParsers\\ClassParser",
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "PhpDocGenerator",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Configure",
+                    "implements": [],
+                    "comments": {
+                        "title": "Tool to create JSON from SRC PHP files.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "json",
+                        "posStart": 570,
+                        "comments": {
+                            "title": "Json object with all data.",
+                            "contents": "@var stdClass"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "create",
+                        "posStart": 710,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Creates json.",
+                            "contents": "@return self"
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "getJson",
+                        "posStart": 1966,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Getter for result json.",
+                            "contents": "@return stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "addComposer",
+                        "posStart": 2355,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Fills up `composer` nod with composer JSON - if the file `composer.json` exists.",
+                            "contents": "@param App $app App for which composer have to be added.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "scanPhpFiles",
+                        "posStart": 3039,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Scan all `php` files into JSON.",
+                            "contents": "@param App    $app    App for which composer have to be added.\r\n@param string $dirUri Uri to be scanned for PHP files.\r\n@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\PhpParsers\\ClassParser": {
+                "uri": "src\/PhpParsers\/ClassParser.php",
+                "namespace": "Przeslijmi\\Siwiki\\PhpParsers",
+                "uses": {
+                    "CommentsParser": "Przeslijmi\\Siwiki\\PhpParsers\\CommentsParser",
+                    "MethodParser": "Przeslijmi\\Siwiki\\PhpParsers\\MethodParser",
+                    "PropertyParser": "Przeslijmi\\Siwiki\\PhpParsers\\PropertyParser",
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "ClassParser",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Parses PHP class and calls to parse all its properties and methods.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "fileUri",
+                        "posStart": 565,
+                        "comments": {
+                            "title": "Uri of the file with PHP class.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "contents",
+                        "posStart": 763,
+                        "comments": {
+                            "title": "Full contents of the file without new lines (changed to `",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "json",
+                        "posStart": 940,
+                        "comments": {
+                            "title": "Parsed JSON with documentation of this class.",
+                            "contents": "@var stdClass"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1107,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string $fileUri Uri to be parsed."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 2092,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse file.",
+                            "contents": "@return stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "parseNamespace",
+                        "posStart": 2737,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse namespaces (fills up `json->namespace` node).",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "parseUses",
+                        "posStart": 3183,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse uses (fills up `json->uses` node).",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "parseClassName",
+                        "posStart": 4021,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse class name (fills up a lot in `json->class->` nodes).",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "parseClassComments",
+                        "posStart": 6508,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse class comments (fills up `json->class->comments` node).",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "findProperties",
+                        "posStart": 7568,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Finds and parses all properties (fills up `json->properties` array).",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "findMethods",
+                        "posStart": 8712,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Finds and parses all methods (fills up `json->methods` array).",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\PhpParsers\\CommentsParser": {
+                "uri": "src\/PhpParsers\/CommentsParser.php",
+                "namespace": "Przeslijmi\\Siwiki\\PhpParsers",
+                "uses": {
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "CommentsParser",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Parses comment for PHP class \/ property \/ method.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "contents",
+                        "posStart": 430,
+                        "comments": {
+                            "title": "Array (divided by lines) contents of a comment for PHP class \/ property \/ method.",
+                            "contents": "@var array"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "json",
+                        "posStart": 607,
+                        "comments": {
+                            "title": "Parsed JSON with this documentation exploded.",
+                            "contents": "@var stdClass"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 787,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param array $contents Contents of comments to parse."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 1275,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse this property documentation.",
+                            "contents": "@return stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "cleanUp",
+                        "posStart": 1919,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Cleans up the code - ie. removes asterixes from the beginning and empty lines - resulting in clean MD text.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\PhpParsers\\MethodParser": {
+                "uri": "src\/PhpParsers\/MethodParser.php",
+                "namespace": "Przeslijmi\\Siwiki\\PhpParsers",
+                "uses": {
+                    "CommentsParser": "Przeslijmi\\Siwiki\\PhpParsers\\CommentsParser",
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "MethodParser",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Parses one method of a PHP class into JSON documentation.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "contentsFile",
+                        "posStart": 442,
+                        "comments": {
+                            "title": "Contents of a PHP class file.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "json",
+                        "posStart": 624,
+                        "comments": {
+                            "title": "Parsed JSON with documentation of this method.",
+                            "contents": "@var stdClass"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1138,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string  $contentsFile Contents of a PHP class file.\r\n@param integer $posStart     Position of start of this method inside PHP class file.\r\n@param string  $scope        Is this method `private`, `protected` or `public`.\r\n@param boolean $isStatic     Is this method `static`.\r\n@param string  $name         Name of this method."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 1936,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse this property documentation.",
+                            "contents": "@return stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "findDocumentation",
+                        "posStart": 2303,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Find documentation for this property.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\PhpParsers\\PropertyParser": {
+                "uri": "src\/PhpParsers\/PropertyParser.php",
+                "namespace": "Przeslijmi\\Siwiki\\PhpParsers",
+                "uses": {
+                    "CommentsParser": "Przeslijmi\\Siwiki\\PhpParsers\\CommentsParser",
+                    "stdClass": "stdClass"
+                },
+                "class": {
+                    "name": "PropertyParser",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Parses one property of a PHP class into JSON documentation.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "contentsFile",
+                        "posStart": 446,
+                        "comments": {
+                            "title": "Contents of a PHP class file.",
+                            "contents": "@var string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "json",
+                        "posStart": 630,
+                        "comments": {
+                            "title": "Parsed JSON with documentation of this property.",
+                            "contents": "@var stdClass"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "__construct",
+                        "posStart": 1152,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Constructor.",
+                            "contents": "@param string  $contentsFile Contents of a PHP class file.\r\n@param integer $posStart     Position of start of this property inside PHP class file.\r\n@param string  $scope        Is this property `private`, `protected` or `public`.\r\n@param boolean $isStatic     Is this property `static`.\r\n@param string  $name         Name of this property."
+                        }
+                    },
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "parse",
+                        "posStart": 1904,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Parse this property documentation.",
+                            "contents": "@return stdClass"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "findDocumentation",
+                        "posStart": 2271,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Find documentation for this property.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\Siwiki\\Siwiki": {
+                "uri": "src\/Siwiki.php",
+                "namespace": "Przeslijmi\\Siwiki",
+                "uses": {
+                    "Parsedown": "Parsedown",
+                    "Handlers": "Przeslijmi\\Siwiki\\Configure\\Handlers",
+                    "Configure": "Przeslijmi\\Siwiki\\Configure\\SiwikiConfigure",
+                    "CleaningDstDirFopException": "Przeslijmi\\Siwiki\\Exceptions\\CleaningDstDirFopException",
+                    "DocsJsonDonoexException": "Przeslijmi\\Siwiki\\Exceptions\\DocsJsonDonoexException",
+                    "UnknownCommandException": "Przeslijmi\\Siwiki\\Exceptions\\UnknownCommandException",
+                    "UriDonoexException": "Przeslijmi\\Siwiki\\Exceptions\\UriDonoexException",
+                    "UriEmptyException": "Przeslijmi\\Siwiki\\Exceptions\\UriEmptyException",
+                    "MdGenerator": "Przeslijmi\\Siwiki\\MdGenerators\\MdGenerator",
+                    "MdTextForAllPagesIndex": "Przeslijmi\\Siwiki\\MdGenerators\\MdTextForAllPagesIndex",
+                    "Throwable": "Throwable"
+                },
+                "class": {
+                    "name": "Siwiki",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Configure",
+                    "implements": [],
+                    "comments": {
+                        "title": "Main crafting Siwiki class.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "allPages",
+                        "posStart": 954,
+                        "comments": {
+                            "title": "List of all pages - to create index.",
+                            "contents": "@var string[]"
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "craft",
+                        "posStart": 1190,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Crafts wiki.",
+                            "contents": "@throws CleaningDstDirFopException When cleaning destination dir failed.\r\n@return self"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "testEnvironment",
+                        "posStart": 3218,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Test if all data is given and is proper.",
+                            "contents": "@throws UriEmptyException When source or destination uri is empty.\r\n@throws UriDonoexException When source or destination uri does not exists.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "cleanDstUri",
+                        "posStart": 4110,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Clears destination directory.",
+                            "contents": "@param string|null $uri Uri to be cleared (when null - then destination dir is cleared as default).\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "copyAttachments",
+                        "posStart": 5166,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Copy attachments from source to destination uri.",
+                            "contents": "@param string|null $uri Source uri to copy (if null source uri of crafting is used).\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "generateOwnDocsHtmls",
+                        "posStart": 6175,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Generate HTML contents.",
+                            "contents": "@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "generatePhpDocsHtmls",
+                        "posStart": 7260,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Include app documentation on generation (from `_docs.json`).",
+                            "contents": "@throws DocsJsonDonoexException When `_docs.json` is missing.\r\n@return void"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "convertMdToHtml",
+                        "posStart": 9106,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Helper method converting `MD` into `HTML` format.",
+                            "contents": "@param string $sourceName Name of source (used to point error location) - file URI or PHPDoc element.\r\n@param string $md         MD contents to convert.\r\n@return string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "workOnMdCommands",
+                        "posStart": 10331,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Call MD commands - return MD after commands.",
+                            "contents": "@param string $sourceName Name of source (used to point error location) - file URI or PHPDoc element.\r\n@param string $md         MD contents before calling commands.\r\n@throws UnknownCommandException When unknown command is sent.\r\n@return string"
+                        }
+                    },
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "workOnHtmlCommands",
+                        "posStart": 12002,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Call HTML commands - return HTML after commands.",
+                            "contents": "@param string $sourceName Name of source (used to point error location) - file URI or PHPDoc element.\r\n@param string $html       HTML contents before calling commands.\r\n@throws UnknownCommandException When unknown command is sent.\r\n@return string"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

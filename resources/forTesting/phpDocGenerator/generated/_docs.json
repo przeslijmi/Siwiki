@@ -1,0 +1,205 @@
+{
+    "przeslijmi\/siwikiFake": {
+        "composer": {},
+        "classes": {
+            "Przeslijmi\\SiwikiFake\\Deeper\\DeepClass": {
+                "uri": "resources\/forTesting\/phpDocGenerator\/fakeSrc\/Deeper\/DeepClass.php",
+                "namespace": "Przeslijmi\\SiwikiFake\\Deeper",
+                "uses": [],
+                "class": {
+                    "name": "DeepClass",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": []
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "nothing",
+                        "posStart": 145
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "methodOne",
+                        "posStart": 192,
+                        "defValue": null
+                    }
+                ]
+            },
+            "Przeslijmi\\SiwikiFake\\FakeClassFour": {
+                "uri": "resources\/forTesting\/phpDocGenerator\/fakeSrc\/FakeClassFour.php",
+                "namespace": "Przeslijmi\\SiwikiFake",
+                "uses": {
+                    "Class": "Vendor\\App\\Class"
+                },
+                "class": {
+                    "name": "FakeClassFour",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Extension",
+                    "implements": [
+                        "Implementation"
+                    ]
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "nothing",
+                        "posStart": 225
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "methodOne",
+                        "posStart": 272,
+                        "defValue": null
+                    }
+                ]
+            },
+            "Przeslijmi\\SiwikiFake\\FakeClassOne": {
+                "uri": "resources\/forTesting\/phpDocGenerator\/fakeSrc\/FakeClassOne.php",
+                "namespace": "Przeslijmi\\SiwikiFake",
+                "uses": {
+                    "Class": "Vendor\\App\\Class"
+                },
+                "class": {
+                    "name": "FakeClassOne",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [],
+                    "comments": {
+                        "title": "Fake class just to test parsers.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "nothing",
+                        "posStart": 316,
+                        "comments": {
+                            "title": "Property of nothing.",
+                            "contents": ""
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "methodOne",
+                        "posStart": 465,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Do nothing.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\SiwikiFake\\FakeClassThree": {
+                "uri": "resources\/forTesting\/phpDocGenerator\/fakeSrc\/FakeClassThree.php",
+                "namespace": "Przeslijmi\\SiwikiFake",
+                "uses": {
+                    "Class": "Vendor\\App\\Class"
+                },
+                "class": {
+                    "name": "FakeClassThree",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": null,
+                    "implements": [
+                        "Implementation"
+                    ],
+                    "comments": {
+                        "title": "Fake class just to test parsers.",
+                        "contents": "Extra contents to show up in Wiki."
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "nothing",
+                        "posStart": 401,
+                        "comments": {
+                            "title": "Property of nothing.",
+                            "contents": ""
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "methodOne",
+                        "posStart": 550,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Do nothing.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            },
+            "Przeslijmi\\SiwikiFake\\FakeClassTwo": {
+                "uri": "resources\/forTesting\/phpDocGenerator\/fakeSrc\/FakeClassTwo.php",
+                "namespace": "Przeslijmi\\SiwikiFake",
+                "uses": {
+                    "Class": "Vendor\\App\\Class"
+                },
+                "class": {
+                    "name": "FakeClassTwo",
+                    "type": "class",
+                    "isFinal": false,
+                    "isAbstract": false,
+                    "extends": "Extension",
+                    "implements": [],
+                    "comments": {
+                        "title": "Fake class just to test parsers.",
+                        "contents": ""
+                    }
+                },
+                "properties": [
+                    {
+                        "scope": "private",
+                        "isStatic": false,
+                        "name": "nothing",
+                        "posStart": 334,
+                        "comments": {
+                            "title": "Property of nothing.",
+                            "contents": ""
+                        }
+                    }
+                ],
+                "methods": [
+                    {
+                        "scope": "public",
+                        "isStatic": false,
+                        "name": "methodOne",
+                        "posStart": 483,
+                        "defValue": null,
+                        "comments": {
+                            "title": "Do nothing.",
+                            "contents": "@return void"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
